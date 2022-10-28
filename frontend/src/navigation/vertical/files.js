@@ -1,4 +1,4 @@
-import { Server, Grid, Circle, Share2, File } from 'react-feather'
+import { Server, Grid, Circle, Share2, File, Upload } from 'react-feather'
 
 export default [
   {
@@ -17,6 +17,12 @@ export default [
         title: 'Shared',
         icon: <Circle size={12} />,
         navLink: '/user/advance'
+      },
+      {
+        id: 'upload',
+        title: 'Upload',
+        icon: <Upload size={12} />,
+        navLink: '/files'
       }
     ]
   }
