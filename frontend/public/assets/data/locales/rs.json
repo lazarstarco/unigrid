@@ -1,0 +1,17 @@
+{
+    "Network":"Konekcije",
+    "Files":"Datoteke",
+    "Students":"Studenti",
+    "Proffessors":"Profesori",
+    "Private":"Privatni",
+    "Shared":"Deljeni",
+    "Your Student connections" :"Vase konekcije sa studentima",
+    "Name": "Ime",
+    "Date": "Datum Registracije",
+    "We are launching soon":"Vežite se polećemo",
+    "We're creating something awesome. Please subscribe to get notified when it's ready!":"Stvaramo nešto strava, Preplatite se da bi ste ostali u toku sa svim novostima!",
+    "Notify":"Obavesti me!",
+    "Home":"Početna",
+    "Profile":"Profil",
+    "Subjects":"Predmeti"
+}
