@@ -15,9 +15,9 @@ export default [
       },
       {
         id: 'dtAdvance',
-        title: 'Proffessors',
+        title: 'Professors',
         icon: <Circle size={12} />,
-        navLink: '/datatables/advance'
+        navLink: '/network/professors'
       }
     ]
   }

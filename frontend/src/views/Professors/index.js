@@ -16,7 +16,7 @@ import '@styles/react/libs/tables/react-dataTable-component.scss'
 // ** Reactstrap Imports
 import { Card, CardHeader, CardTitle } from 'reactstrap'
 
-const StudentTable = () => {
+const ProfessorTable = () => {
   // ** State
   const [currentPage, setCurrentPage] = useState(0)
 
@@ -53,7 +53,7 @@ const StudentTable = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>{t("Your Student connections")}</CardTitle>
+        <CardTitle tag='h4'>{t("Your Professor connections")}</CardTitle>
       </CardHeader>
       <div className='react-dataTable'>
         <DataTable
@@ -75,4 +75,4 @@ const StudentTable = () => {
   )
 }
 
-export default StudentTable
+export default ProfessorTable

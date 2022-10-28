@@ -22,7 +22,7 @@ const role = {
 export let data
 
 // ** Get initial Data
-axios.get('/api/datatables/initial-data/students').then(response => {
+axios.get('/api/datatables/initial-data/professors').then(response => {
   data = response.data
 })
 

@@ -1406,8 +1406,78 @@ const data = [
   }
 ]
 
+const professors = [
+  {
+    responsive_id: "",
+    id: 1,
+    avatar: "10.jpg",
+    full_name: "Emilija Crnojević",
+    studies: "Information Technologies",
+    email: "emacrnojevic@gmail.com",
+    city: "Kraljevo",
+    date_of_birth: "01/26/1997",
+    university: "Kragujevac University",
+    faculty: "FTN",
+    degree: "Masters",
+    role: 4
+  },
+  {
+    responsive_id: "",
+    id: 2,
+    avatar: "1.jpg",
+    full_name: "Đorđe Milosavljević",
+    studies: "Math Studies",
+    email: "djordje.m.00@gmail.com",
+    city: "Užice",
+    date_of_birth: "04/15/2000",
+    university: "Niš University",
+    faculty: "PMF",
+    degree: "Academic",
+    role: 4
+  }
+]
+
+const students = [
+  {
+    responsive_id: "",
+    id: 1,
+    avatar: "10.jpg",
+    full_name: "Emilija Crnojević",
+    studies: "Information Technologies",
+    email: "emacrnojevic@gmail.com",
+    city: "Kraljevo",
+    date_of_birth: "01/26/1997",
+    university: "Kragujevac University",
+    faculty: "FTN",
+    degree: "Masters",
+    role: 2
+  },
+  {
+    responsive_id: "",
+    id: 2,
+    avatar: "1.jpg",
+    full_name: "Đorđe Milosavljević",
+    studies: "Math Studies",
+    email: "djordje.m.00@gmail.com",
+    city: "Užice",
+    date_of_birth: "04/15/2000",
+    university: "Niš University",
+    faculty: "PMF",
+    degree: "Academic",
+    role: 2
+  }
+]
+
 mock.onGet('/api/datatables/initial-data').reply(() => {
   return [200, data]
+})
+
+mock.onGet('/api/datatables/initial-data/professors').reply(() => {
+  return [200, professors]
+})
+
+mock.onGet('/api/datatables/initial-data/students').reply(() => {
+  return [200, students]
 })
 
 mock.onGet('/api/datatables/data').reply(config => {
