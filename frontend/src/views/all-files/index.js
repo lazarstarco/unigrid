@@ -8,6 +8,7 @@ import { data, reOrderColumns } from './data'
 import ReactPaginate from 'react-paginate'
 import { ChevronDown } from 'react-feather'
 import DataTable from 'react-data-table-component'
+import {useNavigate} from 'react-router-dom'
 
 import '@styles/react/libs/tables/react-dataTable-component.scss'
 
@@ -16,6 +17,7 @@ import '@styles/react/libs/tables/react-dataTable-component.scss'
 import { Card, CardHeader, CardTitle } from 'reactstrap'
 
 const DataTablesReOrder = () => {
+    const router = useNavigate()
   // ** States
   const [currentPage, setCurrentPage] = useState(0)
 
@@ -58,7 +60,9 @@ const DataTablesReOrder = () => {
           noHeader
           pagination
           data={data}
+          style={{cursor:"pointer"}}
           columns={reOrderColumns}
+          onRowClicked ={((row) => { if (row.id === 3) { router('/preview') } })}
           className='react-dataTable'
           sortIcon={<ChevronDown size={10} />}
           paginationComponent={CustomPagination}

@@ -2,6 +2,15 @@
 import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 
+
+import withReactContent from 'sweetalert2-react-content'
+
+// ** Third Party Components
+import Swal from 'sweetalert2'
+
+import '@styles/base/plugins/extensions/ext-component-sweet-alerts.scss'
+
+
 // ** Third Party Components
 import Proptypes from 'prop-types'
 import classnames from 'classnames'
@@ -19,6 +28,43 @@ import {
 } from 'reactstrap'
 
 const BreadCrumbs = props => {
+
+  const MySwal = withReactContent(Swal)
+
+  const handleConfirmDelete = () => {
+    return MySwal.fire({
+      title: 'Payment Required!',
+      text: 'You need to pay 3.99$ to download this file',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, pay and download!',
+      customClass: {
+        confirmButton: 'btn btn-primary',
+        cancelButton: 'btn btn-danger ms-1'
+      },
+      buttonsStyling: false
+    }).then(function (result) {
+      if (result.value) {
+        MySwal.fire({
+          icon: 'success',
+          title: 'Download starting!',
+          text: 'Your files are being downloaded',
+          customClass: {
+            confirmButton: 'btn btn-success'
+          }
+        })
+      } else if (result.dismiss === MySwal.DismissReason.cancel) {
+        MySwal.fire({
+          title: 'Cancelled',
+          text: 'Download canceled!',
+          icon: 'error',
+          customClass: {
+            confirmButton: 'btn btn-success'
+          }
+        })
+      }
+    })
+  }
   // ** Props
   const { data, title } = props
 
@@ -58,7 +104,7 @@ const BreadCrumbs = props => {
       </div>
       <div className='content-header-right text-md-end col-md-3 col-12 d-md-block d-none'>
         <div className='breadcrumb-right dropdown'>
-        <Button color="primary" className="mb-2 ms-auto me-1" style={{width:"15rem"}}>Download <Download /></Button>
+        <Button color="primary" onClick={() => handleConfirmDelete()} className="mb-2 ms-auto me-1" style={{width:"15rem"}}>Download <Download /></Button>
         </div>
       </div>
     </div>
