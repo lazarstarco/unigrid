@@ -1692,6 +1692,49 @@ const students = [
   // }
 ]
 
+const allFiles = [
+  {
+    responsive_id: '',
+    id: 1,
+    file_name: "Exam 1 Year 1",
+    date_of_posting: '24/11/2021',
+    file_type: '.pptx',
+    posted_by: 'Lenka Kovačević',
+    subject: 'Math',
+    faculty: 'Faculty of Science'
+  },
+  {
+    responsive_id: '',
+    id: 2,
+    file_name: "Sun Tzu - Life",
+    date_of_posting: '02/03/2003',
+    file_type: '.epub',
+    posted_by: 'Miloš Milićević',
+    subject: 'History',
+    faculty: 'Faculty of Engineering'
+  },
+  {
+    responsive_id: '',
+    id: 3,
+    file_name: "Testing PDF Upload",
+    date_of_posting: '29/10/2022',
+    file_type: '.pdf',
+    posted_by: 'Ilija Nešković',
+    subject: 'Web Development',
+    faculty: 'Faculty of Engineering'
+  },
+  {
+    responsive_id: '',
+    id: 4,
+    file_name: "Randomness",
+    date_of_posting: '06/09/2022',
+    file_type: '.docx',
+    posted_by: 'Tea Tea',
+    subject: 'Math',
+    faculty: 'Faculty of Science'
+  }
+]
+
 mock.onGet('/api/datatables/initial-data').reply(() => {
   return [200, data]
 })
@@ -1702,6 +1745,10 @@ mock.onGet('/api/datatables/initial-data/professors').reply(() => {
 
 mock.onGet('/api/datatables/initial-data/students').reply(() => {
   return [200, students]
+})
+
+mock.onGet('/api/all-files').reply(() => {
+  return [200, allFiles]
 })
 
 mock.onGet('/api/datatables/data').reply(config => {

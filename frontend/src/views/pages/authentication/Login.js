@@ -42,7 +42,7 @@ const ToastContent = ({ t, name, role }) => {
           <h6>{name}</h6>
           <X size={12} className='cursor-pointer' onClick={() => toast.dismiss(t.id)} />
         </div>
-        <span>You have successfully logged in as an {role} user to Vuexy. Now you can start to explore. Enjoy!</span>
+        <span>You have successfully logged in as an {role} user to UniGrid. Now you can start to explore. Enjoy!</span>
       </div>
     </div>
   )
@@ -78,7 +78,7 @@ const Login = () => {
           ability.update(res.data.userData.ability)
           navigate(getHomeRouteForLoggedInUser(data.role))
           toast(t => (
-            <ToastContent t={t} role={data.role || 'admin'} name={data.fullName || data.username || 'John Doe'} />
+            <ToastContent t={t} role={data.role || 'admin'} name={'Ilija Neskovic'} />
           ))
         })
         .catch(err => console.log(err))

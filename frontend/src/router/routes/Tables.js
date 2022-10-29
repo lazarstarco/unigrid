@@ -6,6 +6,8 @@ const StudentTable = lazy(() => import('../../views/Students'))
 const FileUpload = lazy(() => import('../../views/files'))
 const PdfViewer = lazy(() => import('../../views/files/PdfViewer'))
 const ProfessorTable = lazy(() => import('../../views/Professors'))
+const Subjects = lazy(() => import('../../views/subjects'))
+const AllFiles = lazy(() => import('../../views/all-files'))
 
 const TablesRoutes = [
   {
@@ -34,11 +36,15 @@ const TablesRoutes = [
   },
   {
     path: '/files/private',
-    element: <DTBasic />
+    element: <AllFiles />
   },
   {
     path: '/files/shared',
-    element: <DTBasic />
+    element: <AllFiles />
+  },
+  {
+    path: '/subjects',
+    element: <Subjects />
   }
 ]
 
