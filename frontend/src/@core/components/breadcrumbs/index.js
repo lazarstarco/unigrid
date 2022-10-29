@@ -1,12 +1,15 @@
 // ** React Imports
 import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
+import { saveAs } from 'file-saver'
 
 
 import withReactContent from 'sweetalert2-react-content'
 
 // ** Third Party Components
 import Swal from 'sweetalert2'
+
+import PdfFile from "./pdf-sample.pdf"
 
 import '@styles/base/plugins/extensions/ext-component-sweet-alerts.scss'
 
@@ -45,6 +48,7 @@ const BreadCrumbs = props => {
       buttonsStyling: false
     }).then(function (result) {
       if (result.value) {
+        saveAs(PdfFile, "example.pdf")
         MySwal.fire({
           icon: 'success',
           title: 'Download starting!',
