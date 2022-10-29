@@ -33,7 +33,7 @@ const StudentTable = () => {
       nextLabel={''}
       forcePage={currentPage}
       onPageChange={page => handlePagination(page)}
-      pageCount={Math.ceil(data.length / 5)}
+      pageCount={Math.floor(data.length / 6)}
       breakLabel={'...'}
       pageRangeDisplayed={2}
       marginPagesDisplayed={2}

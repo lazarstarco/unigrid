@@ -10,19 +10,19 @@ export default [
         id: 'filesBasic',
         title: 'Private',
         icon: <Circle size={12} />,
-        navLink: '/users/basic'
+        navLink: '/files/private'
       },
       {
         id: 'filesAdvanced',
         title: 'Shared',
         icon: <Circle size={12} />,
-        navLink: '/user/advance'
+        navLink: '/files/shared'
       },
       {
         id: 'upload',
         title: 'Upload',
         icon: <Upload size={12} />,
-        navLink: '/files'
+        navLink: '/files/upload'
       }
     ]
   }
